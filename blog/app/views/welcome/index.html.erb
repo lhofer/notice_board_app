@@ -1,8 +1,6 @@
-<h1>Notice Board</h1>
+<h1>Notice Board|Trending</h1>
 
-<h3>What's Trending</h3>
-
-<%= link_to 'See all notices', controller: 'articles' %>
+<strong><%= link_to 'See all notices', controller: 'articles' %></strong>
 
 <ul>
 	<% @articles.each do |article| %>

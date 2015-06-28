@@ -1,23 +1,28 @@
-<p>
-	<strong>Title:</strong>
-	<%= @article.title %>
-</p>
-Likes: <%= @article.likes.length %>
-<p>
-	<strong>Text:</strong>
-	<%= @article.text %>
-</p>
+<div class = "centered">
+	<h1>
+		Title: <%= @article.title %>
+	</h1>
 
-<%= render 'likes/form' %>
+	<p><%= @article.text %></p>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+	</br>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+	<p><strong>Likes: </strong><%= @article.likes.length %>
+	<%= render 'likes/form' %></p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %> |
-<%= link_to 'Delete', article_path(@article), 
-	method: :delete,
-	data: { confirm: 'Are you sure?' } %>
+	</br>
+
+	<h1>Comments</h1>
+	<%= render @article.comments %>
+
+	<strong>Add a comment:</strong>
+	<%= render 'comments/form' %>
+
+	</br>
+
+	<%= link_to 'Edit', edit_article_path(@article) %> |
+	<%= link_to 'Back', articles_path %> |
+	<%= link_to 'Delete', article_path(@article), 
+		method: :delete,
+		data: { confirm: 'Are you sure?' } %>
+</div>

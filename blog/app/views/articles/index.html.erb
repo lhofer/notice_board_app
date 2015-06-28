@@ -1,8 +1,8 @@
-<h1>Notice Board</h1>
+<h1>Notice Board|All</h1>
 
-<h2>All Notices</h2>
-<p><%= link_to 'New Notice', new_article_path %></p>
-<p><%= link_to 'See hottest trends', controller: 'welcome' %></p>
+<strong><%= link_to 'New Notice', new_article_path %></strong>
+</br>
+<strong><%= link_to 'See hottest trends', controller: 'welcome' %></strong>
 
 <ul>
 	<% @articles.each do |article| %>
