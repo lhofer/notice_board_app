@@ -8,6 +8,10 @@
 	<%= @article.text %>
 </p>
 
+<%= @article.likes.length %>
+
+<%= render 'likes/form' %>
+
 <h2>Comments</h2>
 <%= render @article.comments %>
 
