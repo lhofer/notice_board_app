@@ -1,23 +1,19 @@
-<h1>Listing articles</h1>
+<h1>Notice Board</h1>
 
-<%= link_to 'New article', new_article_path %>
-
+<h2>All Notices</h2>
+	<p><%= link_to 'New Notice', new_article_path %></p>
 <table>
 	<tr>
 		<th>Title</th>
-		<th>Text</th>
+		<th>Likes</th>
 		<th cospan="2"></th>
 	</tr>
-
 	<% @articles.each do |article| %>
 		<tr>
 			<td><%= article.title %></td>
-			<td><%= article.text %></td>
-			<td><%=link_to 'Show', article_path(article) %></td>
-			<td><%=link_to 'Edit', edit_article_path(article) %></td>
-			<td><%=link_to 'Destroy', article_path(article),
-				method: :delete,
-				data: { confirm: 'Are you sure?' } %></td>
-		</tr>
+			<td><%= article.likes.length %></td>
+			<td><%=link_to 'Read Listing', article_path(article) %></td>
 	<% end %>
 </table>	
+
+<p><%= link_to 'See hottest trends', controller: 'welcome' %></p>

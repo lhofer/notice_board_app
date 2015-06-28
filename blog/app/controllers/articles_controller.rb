@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
 	#http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
 	def index
-		@articles = Article.all
+		@all_articles = Article.all
+		@articles = @all_articles.sort_by { |article| -article.likes.length }
 	end
 
 	def show
