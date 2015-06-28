@@ -6,11 +6,16 @@ body{
   font-family:arial,sans-serif;
   font-size:100%;
   margin:3em;
-  background:#666;
   color:#fff;
+  background-image: url("http://images.fineartamerica.com/images-medium-large-5/old-grunge-wooden-background-christian-lagereek.jpg");
 }
 .centered {
     text-align: center;
+}
+.header {
+  background-color: rgba(80,80,80,.7);
+  padding: 20px;
+  border-radius:8px;
 }
 h2,p{
   font-size:100%;

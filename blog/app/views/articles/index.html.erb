@@ -1,14 +1,15 @@
-<h1>Notice Board|All</h1>
+<div class="header">
+	<h1>Notice Board|All</h1>
 
-<strong><%= link_to 'New Notice', new_article_path %></strong>
-</br>
-<strong><%= link_to 'See hottest trends', controller: 'welcome' %></strong>
-
+	<strong><%= link_to 'New Notice', new_article_path %></strong>
+	</br>
+	<strong><%= link_to 'See hottest trends', controller: 'welcome' %></strong>
+</div>
 <ul>
 	<% @articles.each do |article| %>
 	  <li>
 	    <a href=<%=article_path(article)%> class="sticky">
-	      <h2>Title: <%= article.title %></h2>
+	      <h2><%= article.title %></h2>
 	      <p>Likes: <%= article.likes.length %></p>
 	    </a>
 	  </li>
