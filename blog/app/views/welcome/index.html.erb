@@ -2,17 +2,16 @@
 
 <h3>What's Trending</h3>
 
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Likes</th>
-		<th cospan="2"></th>
-	</tr>
+<%= link_to 'See all notices', controller: 'articles' %>
+
+<ul>
 	<% @articles.each do |article| %>
-		<tr>
-			<td><%= article.title %></td>
-			<td><%= article.likes.length %></td>
-			<td><%=link_to 'Read Listing', article_path(article) %></td>
-	<% end %>
-</table>
-<%= link_to 'See all listings', controller: 'articles' %>
+	  <li>
+	    <a href=<%=article_path(article)%> class="sticky">
+	      <h2>Title: <%= article.title %></h2>
+	      <p>Likes: <%= article.likes.length %></p>
+	    </a>
+	  </li>
+	 <% end %>
+ </ul>
+
