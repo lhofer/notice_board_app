@@ -1,6 +1,5 @@
 <%= form_for([@article, @article.likes.build]) do |f| %>
-  <p>
-    <%= f.submit :value => "Like" %>
-  </p>
+  
+  <strong><%= f.submit :value => "Like" %></strong>
 
 <% end %>

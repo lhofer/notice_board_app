@@ -13,9 +13,15 @@ body{
     text-align: center;
 }
 .header {
-  background-color: rgba(80,80,80,.7);
+  background-color: rgba(60,60,60,.7);
   padding: 20px;
   border-radius:8px;
+}
+h1{
+  color:#FFFFCC;
+}
+strong{
+  color:#B2FFB2;
 }
 h2,p{
   font-size:100%;
@@ -42,6 +48,9 @@ ul li a{
   -moz-transition:-moz-transform .15s linear;
   -o-transition:-o-transform .15s linear;
   -webkit-transition:-webkit-transform .15s linear;
+}
+a{
+  color:#B591FF;
 }
 ul li{
   margin:1em;
