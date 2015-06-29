@@ -13,6 +13,8 @@ class CommentsController < ApplicationController
 		@comment = @article.comments.find(params[:id])
 		@comment.destroy
 		redirect_to article_path(@article)
+		# we dont need to have instance variables because destroy doesnt have a view
+		#can redirect_to comment.article
 	end
 
 	private

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
 
-  resources :articles do
+  devise_for :users
+  resources :articles, shallow: true do 
     resources :comments
   end 
 
